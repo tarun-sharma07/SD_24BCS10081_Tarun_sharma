@@ -1,0 +1,478 @@
+<mxfile host="app.diagrams.net">
+
+  <!-- ============ PAGE 1: FUNCTIONAL REQUIREMENTS ============ -->
+  <diagram name="1. Functional Requirements" id="page1">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="fr_title" value="URL Shortener — Functional Requirements" style="text;html=1;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="60" y="20" width="960" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="fr1" value="1. Shorten a Link&#10;Given a long URL, return a compact alias the user can share instead." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="90" width="460" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="fr2" value="2. Resolve a Link&#10;Visiting the short link sends the browser to the original destination via a redirect." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="560" y="90" width="460" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="fr3" value="3. Vanity Slugs&#10;Logged-in users may request a memorable custom slug instead of a random one, subject to availability." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="190" width="460" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="fr4" value="4. Auto-Expiry&#10;A link can optionally be created with a TTL; after that window it stops resolving." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="560" y="190" width="460" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="fr5" value="5. Traffic Insights&#10;Owners can see visit counts, time-of-visit trends, referring sites, and rough visitor geography per link." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="290" width="460" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="fr6" value="6. Link Dashboard&#10;Signed-in users can list, rename, update, pause or permanently remove links they own." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="560" y="290" width="460" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="fr7" value="7. Idempotent Submits&#10;Re-submitting a long URL that a user already shortened returns their existing short link instead of minting a new one." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="390" width="460" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="fr8" value="8. Abuse Throttling&#10;Cap how many links a single account or IP can mint within a rolling time window." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="560" y="390" width="460" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="fr9" value="9. QR Code Export&#10;Any short link can be rendered as a downloadable QR code for offline/print use." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="490" width="460" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="fr10" value="10. Malicious-Link Screening&#10;Submitted destinations are checked against a threat-intel blocklist before a short link is issued." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="560" y="490" width="460" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <!-- ============ PAGE 2: NON-FUNCTIONAL REQUIREMENTS ============ -->
+  <diagram name="2. Non-Functional Requirements" id="page2">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="nfr_title" value="URL Shortener — Non-Functional Requirements" style="text;html=1;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="60" y="20" width="960" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="nfr1" value="1. Near-Continuous Uptime&#10;Target four nines for the redirect path; the creation path can tolerate brief blips without user-visible impact." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;verticalAlign=top;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="90" width="460" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="nfr2" value="2. Snappy Redirects&#10;p99 redirect latency should stay well under 100ms — this call sits directly in the user's click path." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;verticalAlign=top;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="560" y="90" width="460" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="nfr3" value="3. Elastic Scale-Out&#10;Every tier scales horizontally to absorb billions of stored links and traffic spikes in the tens of thousands of req/sec." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;verticalAlign=top;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="200" width="460" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="nfr4" value="4. No Silent Data Loss&#10;Once a short link is acknowledged as created, it must survive node failures, disk failures, and AZ outages." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;verticalAlign=top;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="560" y="200" width="460" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="nfr5" value="5. Read-Dominant Workload&#10;Clicks vastly outnumber creations (assume roughly 100 reads per write) — design for cheap, cache-friendly reads." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;verticalAlign=top;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="310" width="460" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="nfr6" value="6. Non-Guessable Codes&#10;Short codes must not follow a predictable sequence, or attackers could enumerate private links." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;verticalAlign=top;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="560" y="310" width="460" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="nfr7" value="7. Defense in Depth&#10;Screen outbound destinations for known-bad domains and protect accounts with salted/hashed credentials and token auth." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;verticalAlign=top;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="420" width="460" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="nfr8" value="8. Mixed Consistency Model&#10;Short-code uniqueness needs strong consistency at write time; click counters and dashboards can be eventually consistent." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;verticalAlign=top;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="560" y="420" width="460" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <!-- ============ PAGE 3: BACK-OF-THE-ENVELOPE ESTIMATION ============ -->
+  <diagram name="3. Back-of-the-Envelope Estimation" id="page3">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="est_title" value="URL Shortener — Back-of-the-Envelope Estimation" style="text;html=1;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="60" y="20" width="960" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="assump" value="Assumptions&#10;• 200M new short links created per month&#10;• Read:Write ratio ≈ 100:1  →  ~20B redirects/month&#10;• Retain link + click data for 3 years&#10;• Average stored record ≈ 300 bytes (link row); click event ≈ 200 bytes" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;verticalAlign=top;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="90" width="960" height="100" as="geometry" />
+        </mxCell>
+
+        <mxCell id="qps_write" value="Write QPS&#10;200,000,000 / (30 × 24 × 3600)&#10;≈ 77 links/sec (average)&#10;Peak (×4) ≈ 310 links/sec" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;align=left;verticalAlign=top;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="210" width="300" height="110" as="geometry" />
+        </mxCell>
+
+        <mxCell id="qps_read" value="Read (Redirect) QPS&#10;77 × 100 ≈ 7,700 req/sec (average)&#10;Peak (×4) ≈ 30,800 req/sec" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;align=left;verticalAlign=top;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="400" y="210" width="300" height="110" as="geometry" />
+        </mxCell>
+
+        <mxCell id="storage" value="Link Storage (3 years)&#10;200M/mo × 36 months × 300B&#10;≈ 7.2B links × 300B&#10;≈ 2.2 TB total" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;align=left;verticalAlign=top;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="740" y="210" width="280" height="110" as="geometry" />
+        </mxCell>
+
+        <mxCell id="bandwidth_in" value="Incoming Bandwidth (writes)&#10;77 × 300B ≈ 23 KB/sec" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;align=left;verticalAlign=top;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="340" width="300" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="bandwidth_out" value="Outgoing Bandwidth (redirects)&#10;7,700 × 300B ≈ 2.3 MB/sec" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;align=left;verticalAlign=top;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="400" y="340" width="300" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="cache_mem" value="Cache Memory (hot set)&#10;Assume 15% of daily reads are hot&#10;7,700 × 86400 × 0.15 × 300B&#10;≈ 30 GB → round up to ~40 GB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;align=left;verticalAlign=top;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="740" y="340" width="280" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="keyspace" value="Key-space Sizing&#10;Base62 alphabet [a-zA-Z0-9], 62 symbols&#10;6 chars → 62^6 ≈ 56.8 billion unique codes&#10;Comfortably covers 7.2B links with room to grow" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;align=left;verticalAlign=top;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="460" width="480" height="100" as="geometry" />
+        </mxCell>
+
+        <mxCell id="servers_est" value="Fleet Sizing&#10;Assume 1 redirect instance handles ~1,200 req/sec&#10;Peak 30,800 req/sec → ~26 instances&#10;(rounded up, spread across 3 AZs for headroom)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;align=left;verticalAlign=top;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="560" y="460" width="460" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <!-- ============ PAGE 4: DATABASE DESIGN ============ -->
+  <diagram name="4. Database Design" id="page4">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="820" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="db_title" value="URL Shortener — Database Design (ER Diagram)" style="text;html=1;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="60" y="20" width="1000" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- ACCOUNTS TABLE -->
+        <mxCell id="tbl_users" value="ACCOUNTS" style="swimlane;html=1;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;fontStyle=1;fontSize=14;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="100" width="260" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="u_id" value="PK  account_id : BIGINT" style="text;html=1;align=left;verticalAlign=middle;spacing=6;fontSize=12;" vertex="1" parent="tbl_users">
+          <mxGeometry y="30" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="u_name" value="     display_name : VARCHAR(100)" style="text;html=1;align=left;verticalAlign=middle;spacing=6;fontSize=12;" vertex="1" parent="tbl_users">
+          <mxGeometry y="60" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="u_email" value="UQ  email : VARCHAR(255)" style="text;html=1;align=left;verticalAlign=middle;spacing=6;fontSize=12;" vertex="1" parent="tbl_users">
+          <mxGeometry y="90" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="u_pwd" value="     credential_hash : VARCHAR(255)" style="text;html=1;align=left;verticalAlign=middle;spacing=6;fontSize=12;" vertex="1" parent="tbl_users">
+          <mxGeometry y="120" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="u_created" value="     joined_at : TIMESTAMP" style="text;html=1;align=left;verticalAlign=middle;spacing=6;fontSize=12;" vertex="1" parent="tbl_users">
+          <mxGeometry y="150" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="u_plan" value="     tier : VARCHAR(20)" style="text;html=1;align=left;verticalAlign=middle;spacing=6;fontSize=12;" vertex="1" parent="tbl_users">
+          <mxGeometry y="180" width="260" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- LINKS TABLE -->
+        <mxCell id="tbl_urls" value="LINKS" style="swimlane;html=1;startSize=30;fillColor=#d5e8d4;strokeColor=#82b366;align=center;fontStyle=1;fontSize=14;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=0;" vertex="1" parent="1">
+          <mxGeometry x="420" y="100" width="300" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="url_id" value="PK  link_id : BIGINT" style="text;html=1;align=left;verticalAlign=middle;spacing=6;fontSize=12;" vertex="1" parent="tbl_urls">
+          <mxGeometry y="30" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="url_code" value="UQ  slug : VARCHAR(10)" style="text;html=1;align=left;verticalAlign=middle;spacing=6;fontSize=12;" vertex="1" parent="tbl_urls">
+          <mxGeometry y="60" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="url_long" value="     destination_url : VARCHAR(2048)" style="text;html=1;align=left;verticalAlign=middle;spacing=6;fontSize=12;" vertex="1" parent="tbl_urls">
+          <mxGeometry y="90" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="url_userid" value="FK  owner_id : BIGINT (nullable)" style="text;html=1;align=left;verticalAlign=middle;spacing=6;fontSize=12;" vertex="1" parent="tbl_urls">
+          <mxGeometry y="120" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="url_created" value="     created_at : TIMESTAMP" style="text;html=1;align=left;verticalAlign=middle;spacing=6;fontSize=12;" vertex="1" parent="tbl_urls">
+          <mxGeometry y="150" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="url_expires" value="     ttl_expires_at : TIMESTAMP (nullable)" style="text;html=1;align=left;verticalAlign=middle;spacing=6;fontSize=12;" vertex="1" parent="tbl_urls">
+          <mxGeometry y="180" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="url_active" value="     status : ENUM(active,paused,blocked)" style="text;html=1;align=left;verticalAlign=middle;spacing=6;fontSize=12;" vertex="1" parent="tbl_urls">
+          <mxGeometry y="210" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="url_clicks" value="     visit_count : BIGINT (denormalized)" style="text;html=1;align=left;verticalAlign=middle;spacing=6;fontSize=12;" vertex="1" parent="tbl_urls">
+          <mxGeometry y="240" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="url_custom" value="     is_vanity : BOOLEAN" style="text;html=1;align=left;verticalAlign=middle;spacing=6;fontSize=12;" vertex="1" parent="tbl_urls">
+          <mxGeometry y="270" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="url_safe" value="     safety_check : ENUM(pending,clean,flagged)" style="text;html=1;align=left;verticalAlign=middle;spacing=6;fontSize=12;" vertex="1" parent="tbl_urls">
+          <mxGeometry y="300" width="300" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- VISIT_EVENTS / ANALYTICS TABLE -->
+        <mxCell id="tbl_clicks" value="VISIT_EVENTS  (analytics store)" style="swimlane;html=1;startSize=30;fillColor=#ffe6cc;strokeColor=#d79b00;align=center;fontStyle=1;fontSize=14;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=0;" vertex="1" parent="1">
+          <mxGeometry x="820" y="100" width="300" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="c_id" value="PK  event_id : BIGINT" style="text;html=1;align=left;verticalAlign=middle;spacing=6;fontSize=12;" vertex="1" parent="tbl_clicks">
+          <mxGeometry y="30" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="c_urlid" value="FK  link_id : BIGINT" style="text;html=1;align=left;verticalAlign=middle;spacing=6;fontSize=12;" vertex="1" parent="tbl_clicks">
+          <mxGeometry y="60" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="c_ts" value="     visited_at : TIMESTAMP" style="text;html=1;align=left;verticalAlign=middle;spacing=6;fontSize=12;" vertex="1" parent="tbl_clicks">
+          <mxGeometry y="90" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="c_ip" value="     ip_hash : VARCHAR(64)" style="text;html=1;align=left;verticalAlign=middle;spacing=6;fontSize=12;" vertex="1" parent="tbl_clicks">
+          <mxGeometry y="120" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="c_ref" value="     referrer_host : VARCHAR(255)" style="text;html=1;align=left;verticalAlign=middle;spacing=6;fontSize=12;" vertex="1" parent="tbl_clicks">
+          <mxGeometry y="150" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="c_ua" value="     user_agent : VARCHAR(255)" style="text;html=1;align=left;verticalAlign=middle;spacing=6;fontSize=12;" vertex="1" parent="tbl_clicks">
+          <mxGeometry y="180" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="c_geo" value="     country_code : VARCHAR(2)" style="text;html=1;align=left;verticalAlign=middle;spacing=6;fontSize=12;" vertex="1" parent="tbl_clicks">
+          <mxGeometry y="210" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="c_device" value="     client_type : VARCHAR(20)" style="text;html=1;align=left;verticalAlign=middle;spacing=6;fontSize=12;" vertex="1" parent="tbl_clicks">
+          <mxGeometry y="240" width="300" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Relationships -->
+        <mxCell id="rel_u_url" style="edgeStyle=entityRelationEdgeStyle;html=1;endArrow=ERmany;startArrow=ERone;rounded=0;fontSize=12;" edge="1" parent="1" source="tbl_users" target="tbl_urls">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_url_click" style="edgeStyle=entityRelationEdgeStyle;html=1;endArrow=ERmany;startArrow=ERone;rounded=0;fontSize=12;" edge="1" parent="1" source="tbl_urls" target="tbl_clicks">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="db_note" value="Notes:&#10;• LINKS table: relational store (e.g. PostgreSQL), range- or hash-sharded on slug so lookups route to one shard.&#10;• VISIT_EVENTS: append-only, very high write volume — favors a wide-column / time-series store (e.g. ScyllaDB) or a stream → OLAP pipeline (e.g. Kafka → Druid/ClickHouse).&#10;• visit_count on LINKS is a rolling counter updated asynchronously so the redirect path never blocks on analytics writes.&#10;• owner_id is nullable to support anonymous, unauthenticated link creation." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;verticalAlign=top;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="450" width="1060" height="130" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <!-- ============ PAGE 5: API DESIGN ============ -->
+  <diagram name="5. API Design" id="page5">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="950" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="api_title" value="URL Shortener — API Design" style="text;html=1;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="60" y="20" width="960" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="api1_m" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="90" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="api1_p" value="/api/v1/links&#10;Create a short link. Body: { destination_url, vanity_slug?, ttl_seconds? } → 201 { slug, short_url }" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;verticalAlign=middle;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="160" y="90" width="860" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="api2_m" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="140" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="api2_p" value="/{slug}&#10;Resolve and redirect to the destination URL. 302 Found with Location header; 410 Gone if expired/paused, 404 if unknown." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;verticalAlign=middle;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="160" y="140" width="860" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="api3_m" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="190" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="api3_p" value="/api/v1/links/{slug}&#10;Fetch link metadata (destination_url, created_at, ttl_expires_at, visit_count, status). Owner-only." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;verticalAlign=middle;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="160" y="190" width="860" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="api4_m" value="PATCH" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="240" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="api4_p" value="/api/v1/links/{slug}&#10;Partially update a link: change destination, TTL, or status (active/paused). Owner-only." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;verticalAlign=middle;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="160" y="240" width="860" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="api5_m" value="DELETE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="290" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="api5_p" value="/api/v1/links/{slug}&#10;Permanently remove a link (owner-only) → 204 No Content." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;verticalAlign=middle;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="160" y="290" width="860" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="api6_m" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="340" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="api6_p" value="/api/v1/links/{slug}/stats&#10;Traffic insights: total visits, visits-over-time buckets, top referrers, top countries." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;verticalAlign=middle;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="160" y="340" width="860" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="api7_m" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="390" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="api7_p" value="/api/v1/accounts/{accountId}/links&#10;List links owned by an account, paginated (?cursor=, ?limit=)." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;verticalAlign=middle;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="160" y="390" width="860" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="api8_m" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="440" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="api8_p" value="/api/v1/links/{slug}/qrcode&#10;Return a PNG/SVG QR code encoding the short URL." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;verticalAlign=middle;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="160" y="440" width="860" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="api9_m" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="490" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="api9_p" value="/api/v1/auth/signup&#10;Create a new account. Body: { display_name, email, password }." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;verticalAlign=middle;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="160" y="490" width="860" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="api10_m" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="540" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="api10_p" value="/api/v1/auth/session&#10;Authenticate and issue a short-lived JWT plus refresh token." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;verticalAlign=middle;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="160" y="540" width="860" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="api_note" value="Notes: All endpoints except redirect, signup, and session require Authorization: Bearer &lt;token&gt;. Errors follow { error_code, message, request_id }. Throttling is enforced at the API Gateway, keyed by account and by IP." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;verticalAlign=top;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="600" width="960" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <!-- ============ PAGE 6: ARCHITECTURE DESIGN ============ -->
+  <diagram name="6. Architecture Design" id="page6">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="920" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="arch_title" value="URL Shortener — High-Level Architecture" style="text;html=1;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="60" y="10" width="1100" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Client -->
+        <mxCell id="client" value="Client&#10;(Browser / Mobile App)" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="90" width="80" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- CDN / Edge -->
+        <mxCell id="cdn" value="Edge / CDN" style="shape=cloud;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="190" y="90" width="120" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Load Balancer -->
+        <mxCell id="lb" value="Load Balancer" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="380" y="90" width="140" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- API Gateway -->
+        <mxCell id="gw" value="API Gateway&#10;(auth, throttling)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="580" y="90" width="140" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Write Service -->
+        <mxCell id="write_svc" value="Link Creation&#10;Service (write path)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="780" y="40" width="160" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Redirect Service -->
+        <mxCell id="read_svc" value="Redirect Service&#10;(read path)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="780" y="140" width="160" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Slug Generator -->
+        <mxCell id="idgen" value="Slug Generator&#10;(base62-encode of a&#10;distributed counter,&#10;retry on rare collision)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="20" width="180" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- Cache -->
+        <mxCell id="cache" value="Cache Layer&#10;(Redis cluster)&#10;slug → destination_url" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="150" width="180" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Primary DB -->
+        <mxCell id="db_primary" value="Primary Store&#10;(sharded PostgreSQL)&#10;LINKS, ACCOUNTS" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;boundedLbl=1;" vertex="1" parent="1">
+          <mxGeometry x="820" y="270" width="120" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Message Queue -->
+        <mxCell id="mq" value="Event Stream&#10;(Kafka)" style="shape=mxgraph.basic.folder;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;direction=north;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="280" width="140" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Analytics DB -->
+        <mxCell id="analytics_db" value="Analytics Store&#10;(ScyllaDB / ClickHouse)&#10;VISIT_EVENTS" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="265" width="120" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Safety scanner -->
+        <mxCell id="safety" value="Threat-Intel&#10;Screening Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="780" y="400" width="160" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Monitoring -->
+        <mxCell id="monitor" value="Monitoring &amp;&#10;Logging&#10;(Prometheus/ELK)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;dashed=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="580" y="270" width="140" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Edges -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=11;" edge="1" parent="1" source="client" target="cdn">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="static/cached" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=11;" edge="1" parent="1" source="cdn" target="lb">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=11;" edge="1" parent="1" source="lb" target="gw">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="POST /links" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=11;" edge="1" parent="1" source="gw" target="write_svc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="GET /{slug}" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=11;" edge="1" parent="1" source="gw" target="read_svc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="mint slug" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=11;" edge="1" parent="1" source="write_svc" target="idgen">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="lookup (miss → DB)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=11;" edge="1" parent="1" source="read_svc" target="cache">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="write" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=11;" edge="1" parent="1" source="write_svc" target="db_primary">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" value="screen destination" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=11;" edge="1" parent="1" source="write_svc" target="safety">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="fallback read" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;dashed=1;fontSize=11;" edge="1" parent="1" source="cache" target="db_primary">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" value="publish visit event" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=11;" edge="1" parent="1" source="read_svc" target="mq">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" value="consume &amp; persist" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=11;" edge="1" parent="1" source="mq" target="analytics_db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;dashed=1;fontSize=11;" edge="1" parent="1" source="db_primary" target="monitor">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="arch_note" value="Write path: Client → Edge/CDN → LB → API Gateway → Creation Service → Slug Generator (base62 counter, collision retry) → Threat-Intel Screening → Primary Store.&#10;Read path: Client → Edge/CDN → LB → API Gateway → Redirect Service → Cache (hit) or Primary Store (miss, then warm the cache) → 302 redirect.&#10;Visit events are published asynchronously to the event stream and persisted to a separate analytics store, keeping the redirect path free of analytics writes." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;verticalAlign=top;spacing=8;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="500" width="1260" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+</mxfile>
